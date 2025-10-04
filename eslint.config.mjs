@@ -37,7 +37,10 @@ export default withNuxt(
         }],
         // file naming
         'unicorn/filename-case': ['error', {
-          case: 'camelCase',
+          cases: {
+            kebabCase: true,
+            camelCase: true
+          },
           ignore: ['README.md']
         }],
         'style/comma-dangle': ['error', 'never']
