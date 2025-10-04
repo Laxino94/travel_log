@@ -6,10 +6,9 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 
 Make sure to install dependencies:
 
-```bash
+````bash
 
 pnpm install
-
 
 ## Development Server
 
@@ -27,9 +26,9 @@ Build the application for production:
 
 pnpm build
 
-
 Locally preview production build:
 
 ```bash
 
 pnpm preview
+````
