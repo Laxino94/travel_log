@@ -6,6 +6,9 @@
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
+  "files.associations": {
+    "*.css":"tailwindcss"
+  },
 
   "eslint.rules.customizations": [
     { "rule": "style/*", "severity": "off", "fixable": true },
