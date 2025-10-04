@@ -14,16 +14,16 @@ export default withNuxt(
         indent: 2,
         semi: false,
         quotes: 'single'
-      }
-    },
-    {
+      },
       ignores: [
         '**/*.json',
         '**/*.yaml',
         '.pnpm-store/**',
         'node_modules/**',
         'dist/**'
-      ],
+      ]
+    },
+    {
       rules: {
         'ts/consistent-type-definitions': ['error', 'type'], // use type instead of interface
         'no-console': ['warn'], // allow console during development
