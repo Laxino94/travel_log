@@ -9,10 +9,7 @@
           Welcome to Travel Log, your personal travel companion. Document your journeys, share experiences,
           and explore new destinations with ease.
         </p>
-        <button class="btn btn-accent">
-          Sign In With Github
-          <Icon name="tabler:brand-github" size="24" />
-        </button>
+        <AuthButton />
       </div>
     </div>
   </div>
