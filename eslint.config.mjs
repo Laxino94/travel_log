@@ -27,6 +27,7 @@ export default withNuxt(
     },
     {
       rules: {
+        'ts/no-redeclare': ['off'], // allow redeclare variables
         'ts/consistent-type-definitions': ['error', 'type'], // use type instead of interface
         'no-console': ['warn'], // allow console during development
         'antfu/no-top-level-await': ['off'], // allow top level await
