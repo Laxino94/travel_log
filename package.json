@@ -21,7 +21,6 @@
   "dependencies": {
     "@nuxt/eslint": "1.9.0",
     "@nuxt/icon": "2.0.0",
-    "@nuxtjs/color-mode": "3.5.2",
     "@tailwindcss/vite": "^4.1.14",
     "nuxt": "^4.1.2",
     "tailwindcss": "^4.1.14",
@@ -33,6 +32,7 @@
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@iconify-json/tabler": "^1.2.23",
+    "@nuxtjs/color-mode": "3.5.2",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "daisyui": "^5.1.27",
