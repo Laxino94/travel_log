@@ -21,6 +21,7 @@
   "dependencies": {
     "@nuxt/eslint": "1.9.0",
     "@nuxt/icon": "2.0.0",
+    "@nuxtjs/color-mode": "3.5.2",
     "@tailwindcss/vite": "^4.1.14",
     "nuxt": "^4.1.2",
     "tailwindcss": "^4.1.14",
@@ -40,6 +41,8 @@
     "eslint-plugin-unicorn": "^61.0.2",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.3",
+    "unplugin-icons": "^22.4.2",
+    "unplugin-vue-components": "^29.1.0",
     "vite-plugin-eslint2": "^5.0.4"
   },
   "lint-staged": {
