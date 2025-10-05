@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-import tryParseEnv from './try-parse-evt'
+import tryParseEnv from './try-parse-env'
 
 // this is a validation schema for environment variables
 const EnvSchema = z.object({
