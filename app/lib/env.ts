@@ -5,8 +5,9 @@ import tryParseEnv from './try-parse-evt'
 // this is a validation schema for environment variables
 const EnvSchema = z.object({
   // to see if in development or production mode from node
-  NODE_ENV: z.string()
-//   ,BANANA: z.string() // if this variable is missing, the app wont start
+  NODE_ENV: z.string(),
+  TURSO_DATABASE_URL: z.string(),
+  TURSO_AUTH_TOKEN: z.string()
 })
 
 tryParseEnv(EnvSchema)

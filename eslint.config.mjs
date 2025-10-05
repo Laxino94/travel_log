@@ -18,11 +18,8 @@ export default withNuxt(
         quotes: 'single'
       },
       ignores: [
-        '**/*.json',
-        '**/*.yaml',
         '.pnpm-store/**',
-        'node_modules/**',
-        'dist/**'
+        '**/migrations/**'
       ]
     },
     {

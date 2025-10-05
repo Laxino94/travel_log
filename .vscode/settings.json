@@ -7,7 +7,7 @@
     "source.organizeImports": "never"
   },
   "files.associations": {
-    "*.css":"tailwindcss",
+    "*.css": "tailwindcss",
     "*.vue": "vue"
   },
 
