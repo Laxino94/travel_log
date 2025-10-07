@@ -4,11 +4,17 @@ const authClient = createAuthClient()
 
 // new way to use pinia store with setup
 export const useAuthStore = defineStore('useAuthStore', () => {
-  const session = authClient.useSession()
+  const session = ref<Awaited<ReturnType<typeof authClient.useSession> | null>>(null)
+
+  async function init() {
+    const data = await authClient.useSession(useFetch)
+    session.value = data
+  }
+
   // need a computed value to export the user from session
-  const user = computed(() => session.value.data?.user)
+  const user = computed(() => session.value?.data?.user)
   // session also offer a loading and error state
-  const loading = computed(() => session.value.isPending || session.value.isRefetching) // becasue it is computed is always up to date with the session state
+  const loading = computed(() => session.value?.isPending) // becasue it is computed is always up to date with the session state
 
   async function signIn() {
     await authClient.signIn.social({
@@ -23,6 +29,7 @@ export const useAuthStore = defineStore('useAuthStore', () => {
   }
 
   return {
+    init,
     loading,
     signIn,
     signOut,
