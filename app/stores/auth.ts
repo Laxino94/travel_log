@@ -17,14 +17,27 @@ export const useAuthStore = defineStore('useAuthStore', () => {
   const loading = computed(() => session.value?.isPending) // becasue it is computed is always up to date with the session state
 
   async function signIn() {
+    const { csrf } = useCsrf()
+    const headers = new Headers()
+    headers.append('csrf-token', csrf)
     await authClient.signIn.social({
       provider: 'github',
       callbackURL: '/dashboard',
-      errorCallbackURL: '/error'
+      errorCallbackURL: '/error',
+      fetchOptions: {
+        headers
+      }
     })
   }
   async function signOut() {
-    await authClient.signOut()
+    const { csrf } = useCsrf()
+    const headers = new Headers()
+    headers.append('csrf-token', csrf)
+    await authClient.signOut({
+      fetchOptions: {
+        headers
+      }
+    })
     navigateTo('/')
   }
 

@@ -24,6 +24,14 @@ export default withNuxt(
     },
     {
       rules: {
+        'vue/max-attributes-per-line': ['error', {
+          singleline: {
+            max: 3
+          },
+          multiline: {
+            max: 1
+          }
+        }], // allow multiple attributes per line
         'ts/no-redeclare': ['off'], // allow redeclare variables
         'ts/consistent-type-definitions': ['error', 'type'], // use type instead of interface
         'no-console': ['warn'], // allow console during development
