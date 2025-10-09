@@ -3,15 +3,9 @@ import type { DrizzleError } from 'drizzle-orm'
 import { InsertLocation } from '~/lib/db/schema'
 
 import { findLocationByName, getUniqueSlug, insertLocation } from '../../app/lib/db/queries/location'
+import defineAuthenticatedEventHandler from '../../app/utils/define-authenticated-event-handler'
 
-export default defineEventHandler(async (event) => {
-  // Ensure the user is authenticated
-  if (!event.context.user) {
-    return sendError(event, createError({
-      statusCode: 401,
-      statusMessage: ' Unauthorized'
-    }))
-  }
+export default defineAuthenticatedEventHandler(async (event) => {
   // Validate the request body
   const result = await readValidatedBody(event, InsertLocation.safeParse)
   if (!result.success) {

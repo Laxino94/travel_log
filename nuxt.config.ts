@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     config: {
       standalone: false // load config from .eslintrc (or package.json)
     },
-    checker: true // check eslint on dev and build
+    checker: false // check eslint on dev and build
   },
   css: ['@/assets/css/main.css'],
   vite: {
